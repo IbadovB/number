@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double or single number</title>
+</head>
+
+<body>
+
+    <input type="text" id="numb" placeholder="Enter a number please">
+    <button onclick="check()">Add</button>
+    <p class="result"></p>
+
+
+    <script>
+        function check() {
+            const numb = parseInt(document.querySelector("#numb").value);
+            const result = document.querySelector('.result')
+
+            if (isNaN(numb)) {
+                 numb.value = ""
+            } else if (numb < 0) {
+                 numb.value = ""
+            } else if (numb % 2 === 0) {
+                result.textContent = "Double number";
+            } else {
+                result.textContent = "Single number";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
