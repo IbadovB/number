@@ -11,25 +11,31 @@
 
     <input type="text" id="numb" placeholder="Enter a number please">
     <button onclick="check()">Add</button>
+    <button onclick="reset()">Reset</button>
     <p class="result"></p>
 
-
     <script>
+        const result = document.querySelector('.result')
         function check() {
             const numb = parseInt(document.querySelector("#numb").value);
-            const result = document.querySelector('.result')
-            result.style.color = "black"
+                        result.style.color = "black"
+
             if (isNaN(numb)) {
                 result.textContent = "Please enter a number";
                 result.style.color = "red"
             } else if (numb % 2 === 0) {
                 result.textContent = `${numb} is a double number`;
-             
             } else {
                 result.textContent = `${numb} is a single number`;
-               
-            }
-        }
+
+            }           
+         }          
+
+            function reset() {
+            document.querySelector("#numb").value = ""; 
+            result.textContent = "";                    
+        }     
+
     </script>
 
 </body>
