@@ -18,14 +18,16 @@
         function check() {
             const numb = parseInt(document.querySelector("#numb").value);
             const result = document.querySelector('.result')
-
+            result.style.color = "black"
             if (isNaN(numb)) {
                 result.textContent = "Please enter a number";
                 result.style.color = "red"
             } else if (numb % 2 === 0) {
                 result.textContent = "Double number";
+             
             } else {
                 result.textContent = "Single number";
+               
             }
         }
     </script>
