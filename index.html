@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +20,8 @@
             const result = document.querySelector('.result')
 
             if (isNaN(numb)) {
-                 numb.value = ""
-            } else if (numb < 0) {
-                 numb.value = ""
+                result.textContent = "Please enter a number";
+                result.style.color = "red"
             } else if (numb % 2 === 0) {
                 result.textContent = "Double number";
             } else {
